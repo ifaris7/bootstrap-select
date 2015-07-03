@@ -894,19 +894,19 @@
 
     setWidth: function () {
       if (this.options.width === 'auto') {
-        this.$menu.css('min-width', '0');
+        this.$menu.css('min-width', '240px');
 
-        // Get correct width if element is hidden
-        var $selectClone = this.$menu.parent().clone().appendTo('body'),
-            $selectClone2 = this.options.container ? this.$newElement.clone().appendTo('body') : $selectClone,
-            ulWidth = $selectClone.children('.dropdown-menu').outerWidth(),
-            btnWidth = $selectClone2.css('width', 'auto').children('button').outerWidth();
+        // // Get correct width if element is hidden
+        // var $selectClone = this.$menu.parent().clone().appendTo('body'),
+        //     $selectClone2 = this.options.container ? this.$newElement.clone().appendTo('body') : $selectClone,
+        //     ulWidth = $selectClone.children('.dropdown-menu').outerWidth(),
+        //     btnWidth = $selectClone2.css('width', 'auto').children('button').outerWidth();
 
-        $selectClone.remove();
-        $selectClone2.remove();
+        // $selectClone.remove();
+        // $selectClone2.remove();
 
-        // Set width to whatever's larger, button title or longest option
-        this.$newElement.css('width', Math.max(ulWidth, btnWidth) + 'px');
+        // // Set width to whatever's larger, button title or longest option
+        // this.$newElement.css('width', Math.max(ulWidth, btnWidth) + 'px');
       } else if (this.options.width === 'fit') {
         // Remove inline min-width so width can be changed from 'auto'
         this.$menu.css('min-width', '');
